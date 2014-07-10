@@ -11,6 +11,7 @@ use JMS\Serializer\Annotation\SerializedName;
  * Represent the archive part, in a satis configuration file
  *
  * @author Julius Beckmann <php@h4cc.de>
+ * @author Matt Rardon <matthew.rardon@gmail.com>
  */
 class Archive {
 
@@ -39,6 +40,13 @@ class Archive {
      * @SerializedName("skip-dev")
      */
     private $skip_dev= true;
+
+    /**
+     * @var string
+     * @Type("string")
+     * @SerializedName("absolute-directory")
+     */
+    private $absolute_directory;
 
     /**
      * @param string $directory
@@ -104,6 +112,21 @@ class Archive {
         return $this->skip_dev;
     }
 
+    /**
+     * @param string $absolute_directory
+     */
+    public function setAbsoluteDirectory($absolute_directory)
+    {
+        $this->absolute_directory = $absolute_directory;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAbsoluteDirectory()
+    {
+        return $this->absolute_directory;
+    }
 
 
 
