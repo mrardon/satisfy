@@ -36,6 +36,12 @@ class Configuration implements ConfigurationInterface
     private $require;
 
     /**
+     * @Type("boolean")
+     * @SerializedName("require-dependencies")
+     */
+    private $require_dependencies;
+
+    /**
      * @var Archive
      * @Type("Playbloom\Satisfy\Model\Archive")
      */
